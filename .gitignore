@@ -3,3 +3,4 @@ dwh.cfg
 __pycache__
 .venv
 .ipynb_checkpoints
+.vscode/settings.json
