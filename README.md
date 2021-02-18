@@ -23,7 +23,7 @@ We use a star schema which is optimized for queries on the song play analysis. F
 
 1. clone this repository
 2. copy dwh.cfg.example to dwh.cfg and set all values
-3. create venv running `python -m venv .venv` and active it `source .venv/bin/activate`
+3. create virtual environment running `python -m venv .venv` and active it `source .venv/bin/activate`
 4. install python dependencies `pip install -f requirements.txt`
 5. create redshift cluster `python redshift_util.py -c`
 6. create tables `python create_tables.py` 
