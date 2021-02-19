@@ -273,9 +273,10 @@ def main(create, delete, status):
             while i > 0:
                 status = get_cluster_status(
                     redshift_client, DWH_CLUSTER_IDENTIFIER)
-                if(status == 'deleted'):
+                if(status == 'unknown'):
                     break
                 i -= 1
+                time.sleep(10)
 
                 print(status)
 
