@@ -219,13 +219,15 @@ def main(create, delete, status):
 
     DWH_IAM_ROLE_NAME = config.get("DWH", "DWH_IAM_ROLE_NAME")
 
+    DWH_REGION = config.get("DWH", "DWH_REGION")
+
     iam_client = boto3.client('iam', aws_access_key_id=KEY,
                               aws_secret_access_key=SECRET,
-                              region_name='us-west-2'
+                              region_name=DWH_REGION
                               )
 
     redshift_client = boto3.client('redshift',
-                                   region_name="us-west-2",
+                                   region_name=DWH_REGION,
                                    aws_access_key_id=KEY,
                                    aws_secret_access_key=SECRET
                                    )
